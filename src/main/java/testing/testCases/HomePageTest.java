@@ -15,16 +15,15 @@ import testing.wrapperClass.TestProperty;
 @RestController
 public class HomePageTest {
 	
-	
-	
 	@PostMapping("/testing")
 	public String check(@RequestParam String id) throws InterruptedException{
 		//System.setProperty("webdriver.chrome.driver", TestProperty.readTestProperites("chromedriverLocation"));
 		//WebDriver driver = new ChromeDriver();
 		WebDriver driver = new HtmlUnitDriver();
 		driver.get("https://www.google.com");
-		System.out.println("************ testing  *********" + id);
-		return id;
+		String suceess = "Inflight test is complete for ";
+		System.out.println(suceess +id);
+		return suceess +id;
 		
 		
 		

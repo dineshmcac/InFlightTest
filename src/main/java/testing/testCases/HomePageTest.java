@@ -17,7 +17,7 @@ public class HomePageTest {
 	
 	@PostMapping("/testing")
 	public String check(@RequestParam String id) throws InterruptedException{
-		System.setProperty("webdriver.chrome.driver", TestProperty.readTestProperites("chromedriverLocation"));
+		System.setProperty("webdriver.chrome.driver", "chromedriver");
 		WebDriver driver = new ChromeDriver();
 		//WebDriver driver = new HtmlUnitDriver();
 		driver.get("https://www.google.com");

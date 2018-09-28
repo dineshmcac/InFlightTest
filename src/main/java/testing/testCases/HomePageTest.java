@@ -17,9 +17,9 @@ public class HomePageTest {
 	
 	@PostMapping("/testing")
 	public String check(@RequestParam String id) throws InterruptedException{
-		//System.setProperty("webdriver.chrome.driver", TestProperty.readTestProperites("chromedriverLocation"));
-		//WebDriver driver = new ChromeDriver();
-		WebDriver driver = new HtmlUnitDriver();
+		System.setProperty("webdriver.chrome.driver", TestProperty.readTestProperites("chromedriverLocation"));
+		WebDriver driver = new ChromeDriver();
+		//WebDriver driver = new HtmlUnitDriver();
 		driver.get("https://www.google.com");
 		String suceess = "Inflight test is complete for ";
 		System.out.println(suceess +id);
